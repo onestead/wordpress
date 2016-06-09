@@ -41,7 +41,7 @@ function checkParentNodes(checked, checkbox) {
                         checkParentNodes(checked, parent);
                     } else { /****/ }
                 }
-            }
+            } else { /****/ }
         } else { /****/ }
     } else { /****/ }
 }
