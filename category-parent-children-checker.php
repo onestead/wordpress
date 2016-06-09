@@ -52,6 +52,11 @@ function checkParentNodes(checked, checkbox) {
 if (is_admin()) {
     add_action('admin_footer-post.php', 'my_site__admin_style_category_toggler', 999, 0);
     add_action('admin_footer-post-new.php', 'my_site__admin_style_category_toggler', 999, 0);
+    add_action('wp_terms_checklist_args', function($args, $post_id) {
+        /** terms order keep **/
+        $args['checked_ontop'] = false;
+        return $args;
+    }, 999, 2);
 } else {
     /** theme **/
 }
